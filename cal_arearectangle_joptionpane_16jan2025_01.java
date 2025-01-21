@@ -1,3 +1,4 @@
+// we worked on this 1/21/2025 hope i helped - AN
 import javax.swing.JOptionPane; // Needed for Dialog Box
 
 // This program find area of rectangle using input output dialog box.
