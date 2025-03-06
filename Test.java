@@ -1,5 +1,6 @@
 
 import java.io.*;
+import java.util.Scanner;
 
 // By implementing Serializable interface
 // we make sure that state of instances of class DogStepTracker
@@ -23,12 +24,34 @@ class DogStepTracker implements Serializable {
 
 public class Test {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        // TODO: get all the into 
+        // get all the into 
         
-        int steps = 100;
-        String dogName = "Robert";
-        String dogBreed = "Lab Mix";
-        String owner = "norrisa";
+        // int steps = 100;
+        // String dogName = "Robert";
+        // String dogBreed = "Lab Mix";
+        // String owner = "norrisa";
+
+        
+        // Ask the User to type the info
+
+        Scanner scanner = new Scanner (System.in);
+        System.out.print("Enter the number of steps:");
+        int steps = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+
+
+        System.out.print("Enter the dog's name:");
+        String dogName = scanner.nextLine();
+     
+        System.out.print("Enter the dog's breed:");
+        String dogBreed = scanner.nextLine();
+     
+        System.out.print("Enter the owmer's name: ");
+        String owner = scanner.nextLine();
+        // cleanup
+        scanner.close();
+
+
         DogStepTracker tracker = new DogStepTracker(steps, dogName, dogBreed, owner);
 
         // Serializing 'tracker'
