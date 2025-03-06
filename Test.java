@@ -13,7 +13,7 @@ class DogStepTracker implements Serializable {
     String owner;
 
     // DogStepTracker class constructor
-    public DogStepTracker(int steps, String dogName) {
+    public DogStepTracker(int steps, String dogName, String dogBreed,String owner) {
         this.steps = steps;
         this.dogName = dogName;
         this.dogBreed = dogBreed;
@@ -24,11 +24,12 @@ class DogStepTracker implements Serializable {
 public class Test {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         // TODO: get all the into 
+        
         int steps = 100;
         String dogName = "Robert";
         String dogBreed = "Lab Mix";
         String owner = "norrisa";
-        DogStepTracker tracker = new DogStepTracker(steps, dogName, dogBreed,owner);
+        DogStepTracker tracker = new DogStepTracker(steps, dogName, dogBreed, owner);
 
         // Serializing 'tracker'
         FileOutputStream fos = new FileOutputStream("dog_tracker.txt");
